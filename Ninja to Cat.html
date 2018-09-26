@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Basics</title>
+		<link rel="stylesheet" type="text/css" href="Ninja to Cat.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	    <script>
+
+         $(document).ready(function(){
+          
+           $('img').click(function() {
+
+           // this.src = this.src.replace('img/cat0.png','img/ninja0.png');
+           // this.src = this.src.replace('img/cat1.png','img/ninja1.png');
+           // this.src = this.src.replace('img/cat2.png','img/ninja2.png');
+           // this.src = this.src.replace('img/cat3.png','img/ninja3.png');
+           // this.src = this.src.replace('img/cat4.png','img/ninja4.png'); 
+           
+           let temp = $(this).attr('src');
+            $(this).attr('src',$(this).attr('data-alt-src'));
+            $(this).attr('data-alt-src',temp);
+
+           });
+         
+     });
+
+
+         </script>
+	</head>
+	<body>
+	  <div id="wrapper">
+	  	<img src='img/cat0.png' data-alt-src='img/ninja0.png'/>
+	  	<img src='img/cat1.png' data-alt-src='img/ninja1.png'/> 
+	    <img src='img/cat2.png' data-alt-src='img/ninja2.png'/> 
+	    <img src='img/cat3.png' data-alt-src='img/ninja3.png'/> 
+	    <img src='img/cat4.png' data-alt-src='img/ninja4.png'/> 
+
+	  </div>
+
+
+	</body>
+</html>
